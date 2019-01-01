@@ -1,0 +1,87 @@
+.row{margin: 0;}
+.container-fluid{background-color:whitesmoke;}
+.section1{
+	min-height: 700px;
+	padding:5% 0;
+}
+.section1 h1{
+	padding:10% 0;
+}
+
+.box{
+	min-height: 320px !important;
+	float: left;
+	padding-left: 0;
+	padding-right: 0; 
+}
+.top{
+	float: left;
+	width: 100%;
+	height:50%;
+	position: relative;
+	margin: 0;
+}
+.box-head{
+	width:42%;
+	height:70%;
+	border-radius: 100%;
+	background-color: whitesmoke;
+	text-align: center;
+	position:absolute;
+	left:27%;
+}
+.box:hover .box-head{
+	background-color: #62c6fc;
+	transition: 0.5s;
+}
+.box:hover .icon{
+	color: #000;
+	transition: 0.5s;
+}
+.icon{
+	color: #2C2E3E;
+	margin-top: 35%;
+}
+
+ h2{
+	color:white;
+	font-size: 22px;
+	color: black;
+	position: absolute;
+	top:50%;
+	float: left;
+}
+ p{
+	float: left;
+	color:white;
+	padding:2% 8%;
+	line-height: 1.8;
+	position: absolute;
+	top:65%;
+	font-size: 11pt;
+	color:#595959;
+	
+}
+
+
+/* Media Query at large screen size 900px */
+
+/* Media Query at medium screen size 767px */
+@media screen and (max-width:767px){
+	h1{font-size: 34px}
+	h2{top:45%;font-size: 20px;}
+	p{top:60%;}
+	}
+/* Media Query at small screen size 575px */
+@media screen and (max-width:575px){
+	.box-head{width:18%;height:60%;left:41%}
+	.icon{margin-top: 30%}
+	h1{font-size: 30px;}
+	h2{top:40%;}
+	p{top:55%;}
+	}
+	@media screen and (max-width:480px){
+		.box-head{width:20%;height:53%;left:38%}
+		.icon{margin-top: 30%}
+		
+		}

@@ -1,0 +1,90 @@
+<div class="mt1">
+  <h2>Book Your Bus</h2>
+</div>
+<form #data=ngForm (ngSubmit)="save(data.value)">
+
+  <div class="row mt ">
+
+    <div class="col-md-3 col-6  ">
+      <label for="name" class="full">Your Name</label>
+      <input type="text" name="name" required #name="ngModel" [class.invalid-box]="name.invalid && name.touched" placeholder="your name"
+        required class="col-12 form-control" [(ngModel)]="user_model.name">
+      <p class="error" [class.display-none]="name.valid || name.untouched">* Name is required</p>
+    </div>
+
+    <div class="col-md-3 col-6  ">
+      <label for="email" class="full">Your Email</label>
+      <input type="text" name="email" required #email="ngModel" [class.invalid-box]="name.invalid && name.touched" placeholder="your email"
+        class="col-12 form-control" [(ngModel)]="user_model.email">
+      <p class="error" [class.display-none]="email.valid || email.untouched">* Email is required</p>
+    </div>
+
+    <div class="col-md-3 col-6  ">
+      <label for="contact" class="full"> Contact Number </label>
+      <input type="text" name="phone" required #phone="ngModel" [class.invalid-box]="phone.invalid && phone.touched" placeholder="your contact"
+        class="col-12 form-control" [(ngModel)]="user_model.phone" pattern="^((\+){0,1}[0-9]{0,3}){1}(\-){0,1}[1-9]{1}[0-9]{9}$" >
+      <div *ngIf="phone.errors && (phone.invalid || phone.touched)" [class.display-none]="phone.valid || phone.untouched">
+        <p class="error" *ngIf="phone.errors.required" >* Phone is required</p>
+        <p class="error" *ngIf="phone.errors.pattern">* Number format should be eg. +91-99999999999</p>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6 ">
+      <label for="date" class="full">Date</label>
+      <input type="date" name="date" required #date="ngModel" [class.invalid-box]="name.invalid && name.touched" placeholder="check in"
+        class="col-12 form-control" [(ngModel)]="user_model.date">
+      <p class="error" [class.display-none]="date.valid || date.untouched">* Date is required</p>
+    </div>
+  </div>
+
+  <div class="row  mt1">
+
+    <div class="col-md-3 col-6 ">
+      <label for="source" class="full">From</label>
+      <input type="text" name="source" required #source="ngModel" [class.invalid-box]="name.invalid && name.touched" placeholder="from"
+        class="col-12 form-control" [(ngModel)]="user_model.source">
+      <p class="error" [class.display-none]="source.valid || source.untouched">* Source is required</p>
+    </div>
+
+    <div class="col-md-3 col-6 ">
+      <label for="destination" class="full">To</label>
+      <input type="text" name="dest" required #destination="ngModel" [class.invalid-box]="name.invalid && name.touched"
+        placeholder="to" class=" col-12 form-control" [(ngModel)]="user_model.dest">
+      <p class="error" [class.display-none]="destination.valid || destination.untouched">* Destination is required</p>
+    </div>
+
+    <div class="col-md-3 col-12  ">
+      <label for="nop" class="full">People</label>
+      <input type="text" name="people" required #people="ngModel" [class.invalid-box]="name.invalid && name.touched" placeholder="number of people"
+        class=" col-12 form-control" [(ngModel)]="user_model.people">
+      <p class="error" [class.display-none]="people.valid || people.untouched">* People is required</p>
+    </div>
+
+
+    <div class="col-md-3 col-12 ">
+      <label for="nop" class="full btn-label">&nbsp;</label>
+      <input type="submit" name="sb" value="Enquiry" data-toggle="modal" data-target="#state" [disabled]="data.invalid" class="col-12 btn" > 
+    </div>
+  </div>
+</form>
+
+
+
+
+<!-- The Modal -->
+<div class="modal fade" id="state">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<h5>Thank you for your enquiry!</h5><p>We will contact you shortly.</p>
+			</div>
+		</div>
+	</div>
+</div>

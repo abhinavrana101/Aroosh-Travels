@@ -1,0 +1,41 @@
+<div class="container-fluid booking-box " id="booking-box">
+	<div class="row">
+		<div class="headers  col-md-6 col-sm-8 col-12">
+		<div class="row display">
+			<a href="#" routerLink="/flight" routerLinkActive="activelink" class="type-service col-xs-2 zero-margin"><i class="fa fa-plane">Flight</i></a>
+			<a href="#" data-toggle="modal" data-target="#train" class="type-service col-xs-2"><i class="fa fa-train">Train</i></a>
+			<a href="#" routerLink="/bus" routerLinkActive="activelink"  class="type-service col-xs-2"><i class="fa fa-bus">Bus</i></a>
+			<a href="#" routerLink="/hotel" routerLinkActive="activelink"  class="type-service col-xs-2"><i class="fa fa-hotel">Hotel</i></a>
+			<a href="#" routerLink="/visa" routerLinkActive="activelink" class="type-service col-xs-2"><i class="fab fa-cc-visa">Visa</i></a>
+	</div>
+		</div>
+  </div>
+  <router-outlet></router-outlet>
+	
+	</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="train">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+	  
+			<!-- Modal Header -->
+			<div class="modal-header">
+			  <h4 class="modal-title">This page is under maintenance</h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+	  
+			<!-- Modal body -->
+			<div class="modal-body">
+			  <p>We are sorry but we will resume this service very soon.</p>
+			  <p>Thank you</p>
+			</div>
+	  
+			<!-- Modal footer -->
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			</div>
+	  
+		  </div>
+		</div>
+	  </div>

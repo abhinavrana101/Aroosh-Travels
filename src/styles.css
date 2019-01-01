@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+.full{width:100%;float: left;}
+.left-p{text-align: left}
+.center{text-align: center}
+
+.row{margin:0;padding:0}
+
+.display{display: flex;}
+/* *{font-family: "Quicksand", Arial, sans-serif} */
+
+
+.display-none{display: none;}
+.error{color:#d10000}
+.invalid-box{border:1px solid #d10000}
+a{cursor: pointer;}
+*{font-family: 'Montserrat', sans-serif;}
+
+
+@media screen and (max-width:576px){
+    .error{font-size: 14px;}
+}

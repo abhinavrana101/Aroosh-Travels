@@ -1,0 +1,28 @@
+.contact-page{padding: 0;}
+.contact-top{
+	background-image: url("/assets/images/contact.jpg");
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	min-height: 700px;
+	margin: 0;
+}
+.contact-top h1{
+	color:white;
+	font-size: 60px;
+	font-weight: 500;
+	margin-top: 15%;
+	/*word-spacing: 5px;*/
+	letter-spacing: 2px;
+}
+
+@media screen and (max-width:767px){
+	.contact-top{min-height: 460px;}
+	.contact-top h1{margin-top:12%;font-size: 45px}
+	.contact {margin:0%;}
+}
+/* Media Query at medium screen size 575px */
+@media screen and (max-width:575px){
+	.contact-top{min-height: 280px;}
+	.contact-top h1{margin-top:15%;font-size: 36px}
+	.contact {padding:0%;}
+}

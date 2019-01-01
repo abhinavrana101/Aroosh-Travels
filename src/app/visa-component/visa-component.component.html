@@ -1,0 +1,63 @@
+<form #data=ngForm (ngSubmit)="save(data.value)">
+    <h2>Book Your Visa</h2>
+  <div class="row mt ">
+
+    <div class="col-md-4 col-6  ">
+      <label for="name" class="full">Your Name</label>
+      <input type="text" name="name" required #name ='ngModel' [class.invalid-box]="name.invalid && name.touched" placeholder="your name" class="col-12 form-control" [(ngModel)]="user_model.name">
+    </div>
+
+    <div class="col-md-4 col-6  ">
+      <label for="email" class="full">Your Email</label>
+      <input type="text" name="email" required #email ='ngModel' [class.invalid-box]="name.invalid && name.touched"placeholder="your email" class="col-12 form-control" [(ngModel)]="user_model.email">
+    </div>
+
+    <div class="col-md-4 col-6  ">
+      <label for="contact" class="full"> Contact Number </label>
+      <input type="text" name="phone" required #phone ='ngModel' [class.invalid-box]="name.invalid && name.touched" placeholder="your contact" class="col-12 form-control" [(ngModel)]="user_model.phone">
+    </div>
+
+
+
+
+
+    <div class="col-md-4 col-6">
+      <label for="country" class="full">Country</label>
+      <input type="text" name="country" required #country ='ngModel' [class.invalid-box]="name.invalid && name.touched" placeholder="country" class="col-12 form-control" [(ngModel)]="user_model.country">
+    </div>
+
+    <div class="col-md-4 col-12">
+      <label for="type" class="full">Visa Type</label>
+      <select name="type" required #type ='ngModel' [class.invalid-box]="name.invalid && name.touched" class="col-sm-12 form-control" [(ngModel)]="user_model.visa">
+        <option selected disabled>Select Visa Type</option>
+        <option>Business Visa</option>
+        <option>Tourist Visa</option>
+      </select>
+    </div>
+
+    <div class="col-md-4 col-12 ">
+      <label for="sb" class="full btn-label">&nbsp;</label>
+      <input type="submit" name="sb" value="Enquiry" class="col-12 btn" data-toggle="modal" data-target="#state" [disabled]="data.invalid">
+    </div>
+  </div>
+</form>
+
+
+
+<!-- The Modal -->
+<div class="modal fade" id="state">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<h5>Thank you for your enquiry!</h5><p>We will contact you shortly.</p>
+			</div>
+		</div>
+	</div>
+</div>

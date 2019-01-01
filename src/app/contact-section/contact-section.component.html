@@ -1,0 +1,62 @@
+<div class="container-fluid">
+<div class="contact container" id="contact">
+
+		<div class="row">
+			<h1 class="full center">Do You Need Any Assistance?<br> Write Us Back</h1>
+		</div>
+
+		<form #data=ngForm (ngSubmit)="save(data.value)">
+		<div class="row">
+			<div class="left col-md-6 col-12">
+			
+				
+		<div class="col-12 ">
+				<input type="text" name="name" required #name="ngModel" [class.invalid-box]="name.invalid && name.touched" placeholder="your name"  class="col-12 form-control" [(ngModel)]="user_model.name" >
+				<p class="error" [class.display-none]="name.valid || name.untouched">* Name is required</p>
+		</div>
+
+		<div class="col-12 ">
+			<input type="email" name="email" required #email="ngModel" [class.invalid-box]="email.invalid && email.touched" class="col-12 form-control" placeholder="Enter your email" [(ngModel)]="user_model.email">
+			<p class="error" [class.display-none]="email.valid || email.untouched">* Email is required</p>
+		</div>
+
+		<div class="col-12 ">
+			<input type="text" name="sub" class="col-12 form-control" placeholder="Enter your subject" [(ngModel)]="user_model.sub">
+			
+		</div>
+			
+		
+		</div>
+
+		    <div class="right col-md-6 col-12">
+			<textarea name="msg" class="col-12 form-control" required #msg="ngModel" [class.invalid-box]="msg.invalid && msg.touched" placeholder="Enter your message" [(ngModel)]="user_model.msg"></textarea>
+			<p class="error p" [class.display-none]="msg.valid || msg.untouched">* Message is required</p>	
+		</div>
+
+			<input type="submit" name="sb" class="btn col-md-2 col-sm-3 col-4" data-toggle="modal" data-target="#state" value="Send Message" [disabled]="data.invalid">
+		</div>
+	</form> 
+	
+    </div>
+    
+</div>
+
+
+
+<!-- The Modal -->
+<div class="modal fade" id="state">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<h5>Thank you for your enquiry!</h5><p>We will contact you shortly.</p>
+			</div>
+		</div>
+	</div>
+</div>

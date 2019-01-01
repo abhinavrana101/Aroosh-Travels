@@ -1,0 +1,67 @@
+* {margin:0;padding:0;}
+.carousel{margin: 0;}
+.carousel-inner{position: relative;}
+.carousel-item img{width:100%;max-height: 750px;}
+.carousel-caption{color: whitesmoke;position: absolute;top:200px;}
+.carousel-caption h1{font-family: 'Montserrat', sans-serif;font-size: 72px;font-weight: 400}
+
+
+
+/* 
+.slider{
+    min-height: 800px;
+    position: relative;
+    margin-bottom:5% 0;
+    
+}
+.slide h1{font-size: 60px;position: absolute;top: 300px;color:white;text-align: center}
+.hide{opacity: 0;}
+.slide{
+   height:100%;
+    width:100%;
+    position:absolute;
+    transition:1s;
+}
+.slider1{
+    
+    background-image: url('/assets/images/slider.jpg');
+    background-size: 100% 100%;
+}
+.slider2{
+  
+    background-image: url('/assets/images/slider1.jpg');
+    background-size: 100% 100%;
+}
+.slider3{
+   
+    background-image: url('/assets/images/slider2.jpg');
+    background-size: 100% 100%;
+}
+.slider4{
+   
+    background-image: url('/assets/images/slider3.jpg');
+    background-size: 100% 100%;
+}
+
+ */
+/* Media Query at large screen size 900px */
+/* Media Query at medium screen size 767px */
+@media screen and (max-width:767px){
+    .carousel-item img{max-height: 400px;}
+    .carousel-caption{top:100px;}
+    .carousel-caption h1{font-size: 54px}
+
+}
+/* Media Query at small screen size 575px */
+@media screen and (max-width:575px){
+    .carousel-item img{max-height: 280px;}
+    .carousel-indicators{width:20%;margin-left: 40%}
+    .carousel-caption{top:75px;}
+    .carousel-caption h1{font-size: 30px}
+}
+
+@media screen and (max-width:486px){
+    .carousel-item img{max-height: 200px;}
+    .carousel-caption{top:55px;}
+    .carousel-caption h1{font-size: 26px}
+}
